@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2108F0E-61B2-499A-8406-C37313EE0CB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERPGCore</RootNamespace>
+    <AssemblyName>ERPGCore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\ERPGCore\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Attribute\CustomMonsterInventory.cs" />
+    <Compile Include="Base\Attribute\EffectEditor.cs" />
+    <Compile Include="Base\Attribute\ItemEditor.cs" />
+    <Compile Include="Base\Class\Class.cs" />
+    <Compile Include="Base\Class\ClassBase.cs" />
+    <Compile Include="Base\Class\ClassTreeBase.cs" />
+    <Compile Include="Base\Controller\ControllerBase.cs" />
+    <Compile Include="Base\Creature\Creature.cs" />
+    <Compile Include="Base\Creature\CreatureBase.cs" />
+    <Compile Include="Base\Creature\Monster.cs" />
+    <Compile Include="Base\Creature\NonPlayerCharacter.cs" />
+    <Compile Include="Base\Creature\Player.cs" />
+    <Compile Include="Base\Currency\CurrencyBase.cs" />
+    <Compile Include="Base\Database\DatabaseBase.cs" />
+    <Compile Include="Base\Database\DatabaseElement.cs" />
+    <Compile Include="Base\Datatype\Mat4.cs" />
+    <Compile Include="Base\Datatype\Vec3.cs" />
+    <Compile Include="Base\Datatype\Vec4.cs" />
+    <Compile Include="Base\Effect\Effect.cs" />
+    <Compile Include="Base\Effect\EffectBase.cs" />
+    <Compile Include="Base\Effect\EffectList.cs" />
+    <Compile Include="Base\EName.cs" />
+    <Compile Include="Base\EObject.cs" />
+    <Compile Include="Base\EObjectWithPrefab.cs" />
+    <Compile Include="Base\Expression\ExpressionBase.cs" />
+    <Compile Include="Base\Inventory\CharacterInventory.cs" />
+    <Compile Include="Base\Inventory\Inventory.cs" />
+    <Compile Include="Base\Inventory\InventoryBase.cs" />
+    <Compile Include="Base\Inventory\MonsterInventory.cs" />
+    <Compile Include="Base\Inventory\PlayerInventory.cs" />
+    <Compile Include="Base\IO\Compression.cs" />
+    <Compile Include="Base\IO\Decompression.cs" />
+    <Compile Include="Base\IO\Decryption.cs" />
+    <Compile Include="Base\IO\Encryption.cs" />
+    <Compile Include="Base\Item\Item.cs" />
+    <Compile Include="Base\Item\ItemBase.cs" />
+    <Compile Include="Base\Language\Category.cs" />
+    <Compile Include="Base\Language\Label.cs" />
+    <Compile Include="Base\Attribute\SearchTerm.cs" />
+    <Compile Include="Base\Limit\Limit.cs" />
+    <Compile Include="Base\Limit\LimitBase.cs" />
+    <Compile Include="Base\Logger\ILogger.cs" />
+    <Compile Include="Base\Logger\Logger.cs" />
+    <Compile Include="Base\Logger\LoggerBase.cs" />
+    <Compile Include="Base\Material\Material.cs" />
+    <Compile Include="Base\Material\MaterialBase.cs" />
+    <Compile Include="Base\Properties\BoolPropertiesBase.cs" />
+    <Compile Include="Base\Properties\FloatPropertiesAddition.cs" />
+    <Compile Include="Base\Properties\FloatPropertiesBase.cs" />
+    <Compile Include="Base\Properties\IntPropertiesAddition.cs" />
+    <Compile Include="Base\Properties\IntPropertiesBase.cs" />
+    <Compile Include="Base\Properties\PercentageFloatPropertiesAddition.cs" />
+    <Compile Include="Base\Properties\PercentageIntPropertiesAddition.cs" />
+    <Compile Include="Base\Properties\Properties.cs" />
+    <Compile Include="Base\Properties\PropertiesAddition.cs" />
+    <Compile Include="Base\Properties\PropertiesAdditionList.cs" />
+    <Compile Include="Base\Properties\PropertiesBase.cs" />
+    <Compile Include="Base\Properties\PropertiesList.cs" />
+    <Compile Include="Base\Properties\StringPropertiesBase.cs" />
+    <Compile Include="Base\Quest\Quest.cs" />
+    <Compile Include="Base\Quest\QuestBase.cs" />
+    <Compile Include="Base\Quest\QuestList.cs" />
+    <Compile Include="Base\Quest\QuestRequest.cs" />
+    <Compile Include="Base\Quest\QuestReward.cs" />
+    <Compile Include="Base\Skill\Skill.cs" />
+    <Compile Include="Base\Skill\SkillBase.cs" />
+    <Compile Include="Base\Skill\SkillInformationPack.cs" />
+    <Compile Include="Base\Skill\SkillTreeBase.cs" />
+    <Compile Include="Base\Skill\SkillTreeElement.cs" />
+    <Compile Include="Base\Skill\SkillTreeElementRequirementBase.cs" />
+    <Compile Include="Base\Utility\AnimationCommand.cs" />
+    <Compile Include="Base\Utility\Counter.cs" />
+    <Compile Include="Base\Utility\CreaturePosition.cs" />
+    <Compile Include="Base\Utility\PathFindingCommand.cs" />
+    <Compile Include="Base\Utility\ZoneCommand.cs" />
+    <Compile Include="Database\DataBasePlayer.cs" />
+    <Compile Include="Database\DBCollection.cs" />
+    <Compile Include="Database\LanguageDatabase.cs" />
+    <Compile Include="Database\PlayerDatabase.cs" />
+    <Compile Include="ERPGCore.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
